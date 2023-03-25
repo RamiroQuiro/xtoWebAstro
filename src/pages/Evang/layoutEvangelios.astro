@@ -1,0 +1,23 @@
+---
+import Layaut from "../../components/Layaut.astro";
+const {frontmatter}=Astro.props
+
+
+---
+
+
+<Layaut>
+
+    <section>
+        <div class="w-full h-32 flex items-center justify-center">
+            <h1 class="text-4xl font-bold text-neutral-700">{frontmatter?.title}</h1>
+        
+        </div>
+        <div>
+            <p>
+{frontmatter?.description}
+            </p>
+        </div>
+    </section>
+
+</Layaut>
