@@ -3,19 +3,19 @@ import Layout from "../../components/Layaut.astro";
 
 const posts = await Astro.glob("./Post/*.md");
 ---
-<div class="container">
 
-    <h1 class="text-4xl font-bold text-neutral-700">Evangelios del día</h1>
-    
-    <ul
+<div class="container">
+  <h1 class="text-4xl font-bold text-neutral-700">Evangelios del día</h1>
+
+  <ul
     class="flex bg flex-col font-medium text-lg text-neutral-700 bg-gray-100 h-screen px-10 py-10 gap-5"
-    >
+  >
     {
-        posts?.map((evan) => (
-            <li>
-                <a href={evan.url}>{evan.frontmatter.title}</a>
-                </li>
-    ))
-  }
-</ul>
-                </div>
+      posts?.map((evan) => (
+        <li>
+          <a href={evan.url}>{evan.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
