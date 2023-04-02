@@ -1,8 +1,20 @@
 ---
+import Background from "./Background.astro";
 import NavBar from "./NavBar/NavBar.astro";
 
 ---
 
-<header class="w-full h-screen bg-sky-200">
+<header class="w-full text-gray-800 mx-auto items-center flex h-screen bg-white relative">
+   
 <NavBar/>
+<div class="z-20 absolute w-full mx-auto  h-full flex  ">
+<div class="w-1/2 h-full gap-2 flex flex-col items-start justify-center y pl-32">
+
+    <h1 class="md:text-6xl font-bold">Parroquia</h1>
+    <h1 class="md:text-8xl font-bold"> Cristo Rey</h1>
+    <p class="md:text-3xl">
+       La Banda |  Santiago del Estero</p>
+</div>
+</div>
+<Background/>
 </header>
