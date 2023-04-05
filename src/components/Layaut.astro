@@ -1,4 +1,6 @@
 ---
+import Background from '../pages/header/Background.astro';
+
 interface Props {
   titlePage?: string;
   pageDescription?: string;
@@ -8,7 +10,7 @@ const { titlePage = "Xto Web", pageDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,5 +20,6 @@ const { titlePage = "Xto Web", pageDescription } = Astro.props;
   </head>
   <body>
       <slot />
+      <Background/>
   </body>
 </html>
