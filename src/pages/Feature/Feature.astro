@@ -6,26 +6,26 @@ const arrayFeature=[
         id:1,
         title:"horarios",
         img:"Image",
-        class:'bg-blue-400 '
+        class:'bg-blue-400/80'
     },
     {
         id:2,
         title:"servicios",
         img:"Image",
-        class:'bg-cyan-400 '
+        class:'bg-cyan-400/80'
        },   {
         id:3,
         title:"horarios",
         img:"Image",
-        class:'bg-yellow-600 '
+        class:'bg-yellow-600/80'
     }
 ]
 ---
 
 
-<div class="mx-auto container flex items-center justify-evenly gap-20">
+<div class="mx-auto container flex items-center my-16 justify-evenly gap-20 text-right">
 {arrayFeature.map((feat)=>(
-     <div class={`${feat.class} p-5 h-48 rounded w-3/12 text-gray-100 font-bold text-3xl`}   >
+     <div class={`${feat.class} backdrop-blur-sm p-5 h-48 rounded-lg w-3/12 text-gray-100 font-bold text-3xl`}   >
         <h2>{feat.title}</h2>
         <div>{feat.img}</div>
     </div>
