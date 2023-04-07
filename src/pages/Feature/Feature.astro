@@ -9,29 +9,29 @@ const arrayFeature=[
         id:1,
         title:"horarios",
         img:clock,
-        class:'bg-gradient-to-tr from-blue-400/80 via-blue-500 to-blue-400/80 '
+        class:'bg-gradient-to-tr from-blue-400/40 via-blue-500 to-blue-400/80 '
     },
     {
         id:2,
         title:"servicios",
         img:speaker,
-        class:'bg-gradient-to-tr from-cyan-400/80 via-cyan-500 to-cyan-400/80'
+        class:'bg-gradient-to-tr from-cyan-400/40 via-cyan-500 to-cyan-400/80'
        },   {
         id:3,
         title:"Actividades",
         img:bell,
-        class:'bg-gradient-to-tr from-yellow-400/80 via-yellow-500 to-yellow-400/80 '
+        class:'bg-gradient-to-tr from-yellow-400/40 via-yellow-500 to-yellow-400/80 '
     }
 ]
 ---
 
 
-<div class="mx-auto container flex items-center my-16 justify-evenly gap-20 text-right overflow-hidden">
+<div class="mx-auto container flex items-center my-16 justify-evenly gap-20 text-right ">
 {arrayFeature.map((feat)=>(
-     <div class={`${feat.class} backdrop-blur-sm p-5 h-48 rounded-lg w-3/12 text-gray-100 font-bold text-3xl`}   >
-        <h2 class="uppercase text-xl">{feat.title}</h2>
+     <div class={`${feat.class} group backdrop-blur-sm p-5 h-48 rounded-lg w-3/12 shadow-lg overflow-hidden duration-200 hover:scale-105 hover:shadow-xl hover:-translate-y-1 cursor-pointer text-gray-100 font-bold text-3xl`}   >
+        <h2 class="uppercase text-xl group-hover:text-2xl  duration-300 group-hover:underline group-hover:text-gray-200 group-hover:tracking-widest">{feat.title}</h2>
        <Image 
-       class="-rotate-45 -translate-y-3"
+       class="-rotate-45 -translate-y-3 group-hover:-rotate-[55deg] duration-150"
        alt={feat.title}
         width={200}
         height={200}

@@ -1,0 +1,52 @@
+
+---
+import { Image } from '@astrojs/image/components';
+const novedades=[
+{
+src:'https://content.wepik.com/statics/20743809/preview-page0.jpg',
+id:1,
+title:'uno'
+},
+{
+src:'https://cdn.pixabay.com/photo/2018/06/17/19/12/church-3481187_1280.jpg',
+id:2,
+title:'dos'
+},
+{
+src:'https://cdn.pixabay.com/photo/2023/03/23/01/02/maundy-thursday-7870823_1280.png',
+id:3,
+title:'tres'
+},
+{
+src:'https://content.wepik.com/statics/20710802/preview-page0.jpg',
+id:4,
+title:'cuatro'
+},
+{
+src:'https://content.wepik.com/statics/25133777/preview-page0.jpg',
+id:5,
+title:'cinco'
+},
+{
+src:'https://cdn.pixabay.com/photo/2010/12/13/10/33/catholic-2897_1280.jpg',
+id:6,
+title:'seis'
+},
+
+]
+
+---
+
+<section class="container mx-auto my-20 text-gray-700 flex flex-col items-center justify-center">
+
+    <h2 class="text-3xl font-bold my-16 ">Novedades</h2>
+    <div class="mx-auto w-11/12 flex flex-wrap items-center justify-evenly gap-y-8">
+      {
+novedades?.map((novedad)=>(
+    <div class="object-cover shadow-lg ">
+        <img src={novedad.src} alt={novedad.title} height={300} width={300} class="h-96 object-cover">
+        </div>
+))
+      }
+    </div>
+</section>
