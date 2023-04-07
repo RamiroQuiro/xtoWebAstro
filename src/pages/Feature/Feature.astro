@@ -1,33 +1,42 @@
 ---
-import FeatureComponent from "./componentes/FeatureComponent";
-
+import horarios from "../../../public/image/horarios.svg";
+import clock from "../../../public/image/clock.svg";
+import speaker from "../../../public/image/speaker.svg";
+import bell from "../../../public/image/bell.svg";
+import { Image } from '@astrojs/image/components';
 const arrayFeature=[
     {
         id:1,
         title:"horarios",
-        img:"Image",
-        class:'bg-blue-400/80'
+        img:clock,
+        class:'bg-gradient-to-tr from-blue-400/80 via-blue-500 to-blue-400/80 '
     },
     {
         id:2,
         title:"servicios",
-        img:"Image",
-        class:'bg-cyan-400/80'
+        img:speaker,
+        class:'bg-gradient-to-tr from-cyan-400/80 via-cyan-500 to-cyan-400/80'
        },   {
         id:3,
-        title:"horarios",
-        img:"Image",
-        class:'bg-yellow-600/80'
+        title:"Actividades",
+        img:bell,
+        class:'bg-gradient-to-tr from-yellow-400/80 via-yellow-500 to-yellow-400/80 '
     }
 ]
 ---
 
 
-<div class="mx-auto container flex items-center my-16 justify-evenly gap-20 text-right">
+<div class="mx-auto container flex items-center my-16 justify-evenly gap-20 text-right overflow-hidden">
 {arrayFeature.map((feat)=>(
      <div class={`${feat.class} backdrop-blur-sm p-5 h-48 rounded-lg w-3/12 text-gray-100 font-bold text-3xl`}   >
-        <h2>{feat.title}</h2>
-        <div>{feat.img}</div>
+        <h2 class="uppercase text-xl">{feat.title}</h2>
+       <Image 
+       class="-rotate-45 -translate-y-3"
+       alt={feat.title}
+        width={200}
+        height={200}
+        src={feat.img}
+         />
     </div>
     
 ))}
