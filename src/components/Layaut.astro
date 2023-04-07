@@ -1,5 +1,6 @@
 ---
 import Background from '../pages/header/Background.astro';
+import NavBar from '../pages/NavBar/NavBar.astro';
 
 interface Props {
   titlePage?: string;
@@ -19,6 +20,7 @@ const { titlePage = "Xto Web", pageDescription } = Astro.props;
     <title>{titlePage}</title>
   </head>
   <body>
+    <NavBar />
       <slot />
       <Background/>
   </body>

@@ -8,6 +8,7 @@ const arrayFeature=[
     {
         id:1,
         title:"horarios",
+        href:'/horarios',
         img:clock,
         class:'bg-gradient-to-tr from-blue-400/40 via-blue-500 to-blue-400/80 '
     },
@@ -28,7 +29,9 @@ const arrayFeature=[
 
 <div class="mx-auto container flex items-center my-16 justify-evenly gap-20 text-right ">
 {arrayFeature.map((feat)=>(
-     <div class={`${feat.class} group backdrop-blur-sm p-5 h-48 rounded-lg w-3/12 shadow-lg overflow-hidden duration-200 hover:scale-105 hover:shadow-xl hover:-translate-y-1 cursor-pointer text-gray-100 font-bold text-3xl`}   >
+     <a 
+     href={feat.href}     
+     class={`${feat.class} group backdrop-blur-sm p-5 h-48 rounded-lg w-3/12 shadow-lg overflow-hidden duration-200 hover:scale-105 hover:shadow-xl hover:-translate-y-1 cursor-pointer text-gray-100 font-bold text-3xl`}   >
         <h2 class="uppercase text-xl group-hover:text-2xl  duration-300 group-hover:underline group-hover:text-gray-200 group-hover:tracking-widest">{feat.title}</h2>
        <Image 
        class="-rotate-45 -translate-y-3 group-hover:-rotate-[55deg] duration-150"
@@ -37,7 +40,7 @@ const arrayFeature=[
         height={200}
         src={feat.img}
          />
-    </div>
+    </a>
     
 ))}
 </div>

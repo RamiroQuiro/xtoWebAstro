@@ -1,13 +1,20 @@
+---
+import Links from "../../components/Links";
+---
+
 <nav class="w-full py-5 fixed top-0 text-gray-700 z-50 flex items-center justify-between px-5 bg-white/60 border-b  border-cyan-300/80">
     <div class="w-3/12 mx-auto flex bg-red-<500>">logo</div>
     <div class="w-6/12">
         <ul class="flex items-center justify-evenly">
-            <li class="cursor-pointer">Parroquia</li>
-            <li>Actividades</li>
-            <li>Oración</li>
-            <li>Enlaces</li>
-            <li>Contacto</li>
+            {
+                Links?.map((link)=>(
+    <li class="cursor-pointer">
+        <a href={link.href}>
+        {link.name}</a></li>
+
+))
+            }
         </ul>
     </div>
-    <div class="w-3/12 mx-auto flex bg-red-<500>">direcion</div>
+    <div class="w-3/12 mx-auto flex bg-red-<500>">otra cosa</div>
 </nav>
