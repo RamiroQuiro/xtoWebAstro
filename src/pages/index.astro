@@ -6,16 +6,19 @@ import Header from "./header/Header.astro";
 import Servicios from "./Servicios/Servicios.astro";
 import Evangelios from "./Evangelio/evangelio.astro";
 import Novedades from "./Novedades/Novedades.astro";
+import HorarioHome from "./HorarioHome/HorarioHome.astro";
+import BannerCapilla from "./BannerCapillas/BannerCapilla.astro";
 ---
 
 <Layaut pageDescription="Pagina de la Parroquia Cristo Rey de La Banda">
  
   <Header />
-  <main>
+  <main class=" ">
     <Feature />
     <Novedades />
-    <Evangelios />
+	<HorarioHome/>
     <Servicios />
+	<BannerCapilla/>
     <About />
   </main>
   <footer></footer>

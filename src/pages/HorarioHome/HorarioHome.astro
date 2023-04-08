@@ -1,0 +1,42 @@
+---
+import CardHorario from "./CardHorario.astro";
+---
+
+
+
+<section class="bg-gray-100  z-20 relative ">
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <h2 class="text-center text-4xl text-gray-700 font-bold tracking-tight sm:text-5xl ">
+        Horarios de Misa - Parroquia Cristo Rey
+      </h2>
+  
+      <div class="mt-12 flex flex-wrap gap-4 md:grid-cols-3 md:gap-8">
+      <CardHorario
+      dias="Lunes a Viernes"
+      horario="19:00hs"
+      />
+      <CardHorario
+      dias="Sabado"
+      horario="10:00hs | 19:00hs"
+      />
+      <CardHorario
+      dias="Domingo"
+      horario="11:00hs | 20:00hs"
+      />
+   
+      <CardHorario
+      dias="Todos los Dias"
+      horario="Secretaría parroquial De lunes a viernes de 16.00 hs a 20.00 hs"
+      />
+   
+      <CardHorario
+      dias="Todos los Dias"
+      horario="Confesiones Durante la Semana, pedirle al Sacerdote al finalizar la Misa. Los Domingos, hay confesiones durante todas las Misas."
+      />
+   
+      </div>
+    </div>
+  </section>
+  
+
+  

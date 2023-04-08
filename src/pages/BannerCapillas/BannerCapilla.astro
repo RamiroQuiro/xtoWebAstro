@@ -1,0 +1,39 @@
+---
+import { comunidad } from "../../types/comunidad";
+import CardCapilla from "./CardCapilla.astro";
+
+
+
+const comunidades:comunidad[] = [
+    {
+        name:"Capilla Santa Rita",
+        ubicacion:"Barrio Fraternidad",
+        festividad:"22 de Mayo"
+    },
+    {
+        name:"Capilla San Cayetano",
+        ubicacion:"Barrio Villa Raquel",
+        festividad:"7 de Agosto"
+    },
+    ];
+---
+
+<section class="my-20 z-20 relative">
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <h2
+      class="text-center text-4xl text-gray-700 font-bold tracking-tight sm:text-5xl"
+    >
+      Nuestra Comunidad
+    </h2>
+
+    <div class="mt-12 flex flex-wrap gap-4 items-center justify-evenly">
+     {
+        comunidades?.map((comunidad)=>(
+            <CardCapilla
+            {...comunidad}
+            />
+        ))
+     }
+    </div>
+  </div>
+</section>
