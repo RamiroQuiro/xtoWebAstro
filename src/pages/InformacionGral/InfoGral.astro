@@ -1,0 +1,39 @@
+---
+import { cardInfoGral } from "../../types/cardInfoGral";
+import CardInfoGral from "./CardInfoGral.astro";
+
+const cardInfo:cardInfoGral[]=[
+    {
+        colors:"from-orange-500 via-orange-200 to-orange-400 ",
+        children:'Bautismos',
+        src:'https://cdn.pixabay.com/photo/2019/11/27/10/11/christening-4656562_640.jpg'
+    },
+    {
+        colors:"from-orange-500 via-orange-200 to-orange-400 ",
+        children:'Casamiento',
+        src:'https://cdn.pixabay.com/photo/2021/12/24/18/31/rings-6891633_1280.jpg'
+    },
+    {
+        colors:"from-orange-500 via-orange-200 to-orange-400 ",
+        children:'Catequesis',
+        src:'https://cdn.pixabay.com/photo/2018/05/23/09/49/first-communion-3423588_640.jpg'
+    },
+]
+
+---
+
+<section class="my-10 z-20 relative bg-gray-200">
+<div class="w-full container mx-auto flex items-center justify-evenly gap-5 px-10 py-5">
+
+    {
+        cardInfo?.map((card)=>(
+            <CardInfoGral
+            {...card}
+            />
+
+        ))
+    }
+
+</div>
+    
+</section>
