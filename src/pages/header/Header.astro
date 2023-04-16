@@ -1,21 +1,22 @@
 ---
 import LogoNav from "./LogoNav.astro";
-
 ---
 
-<header class="w-full text-neutral-700  mx-auto items-center flex h-screen bg-white relative">
-   
-<div class="z-20 absolute w-full mx-auto  h-full flex  ">
-<div class="w-1/2 h-full gap-2 flex flex-col items-start justify-center y pl-32">
-    
-    <h1 class="md:text-6xl font-bold text-">Parroquia</h1>
-    <h1 class="md:text-8xl font-bold"> Cristo Rey</h1>
-    <p class="md:text-3xl">
-        La Banda |  Santiago del Estero</p>
+<header
+  class="w-full text-neutral-700 mx-auto items-center flex h-screen bg-white relative"
+>
+  <div class="z-20 pt-10 md:mt-0 absolute w-full mx-auto h-full flex flex-col-reverse md:flex-row items-center justify-center">
+    <div
+      class="md:w-1/2 w-full h-full gap-2 -mt-10 flex flex-col md:items-start items-center justify-center y md:pl-32"
+    >
+      <h1 class="md:text-6xl text-5xl font-bold text-">Parroquia</h1>
+      <h1 class="md:text-8xl text-6xl font-bold">Cristo Rey</h1>
+      <p class="md:text-3xl text-xl">La Banda | Santiago del Estero</p>
     </div>
-    <div class="w-1/2 h-full gap-2 flex flex-col items-start justify-center y pl-32">
-    <LogoNav/>
+    <div
+      class="md:w-1/2 w-10/12 h-full gap-2  flex flex-col md:items-start items-center justify-center y md:pl-32 mx-auto"
+    >
+      <LogoNav />
     </div>
-</div>
-
+  </div>
 </header>

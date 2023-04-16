@@ -19,7 +19,7 @@ const { titlePage = "Xto Web", pageDescription } = Astro.props;
     <meta name="description" content={pageDescription} />
     <title>{titlePage}</title>
   </head>
-  <body class="h-full relative z-0">
+  <body class="h-full relative z-0 w-screen overflow-x-hidden">
     <NavBar />
       <slot  class=""/>
       <Background/>

@@ -37,14 +37,14 @@ title:'seis'
 
 ---
 
-<section class="container mx-auto my-36 text-gray-700 flex flex-col items-center justify-center z-20 relative">
+<section class="container mx-auto md:my-36 text-gray-700 flex flex-col items-center justify-center z-20 relative">
 
     <h2 class="text-3xl font-bold my-16 ">Novedades</h2>
-    <div class="mx-auto w-11/12 flex flex-wrap items-center justify-evenly gap-y-8">
+    <div class="mx-auto w-11/12 flex flex-wrap items-center justify-evenly md:gap-y-8 gap-3 ">
       {
 novedades?.map((novedad)=>(
-    <div class="object-cover shadow-lg group overflow-hidden">
-        <img src={novedad.src} alt={novedad.title} height={300} width={300} class="h-96 object-cover group-hover:scale-105 duration-500">
+    <div class="object-cover shadow-lg group overflow-hidden md:w-auto w-[48%]">
+        <img src={novedad.src} alt={novedad.title} height={300} width={300} class="md:h-96   object-cover group-hover:scale-105 duration-500">
         </div>
 ))
       }
