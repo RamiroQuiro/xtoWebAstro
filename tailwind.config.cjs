@@ -8,6 +8,13 @@ module.exports = {
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
+      keyframe:{
+        
+        aparecer: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      }
     },
   },
   // ...

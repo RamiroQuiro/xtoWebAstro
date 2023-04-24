@@ -1,16 +1,16 @@
 
-export default function ButtonNav({handleClick}) {
+export default function ButtonNav({handleClick,toogle}) {
 
 
   return (
     <>
       <button
         onClick={handleClick}
-        class="fixed md:hidden bottom-3  mx-auto z-[60] inset-x-0"
+        className={` fixed md:hidden bottom-4  mx-auto z-[60] inset-x-0`}
       >
         <p class="bg-neutral-100/80  w-14  mx-auto backdrop-blur-sm p-3 border-2 border-blue-400/50 shadow-sm rounded-lg">
           <svg
-            class="h-6 w-6 mx-auto"
+            className={`${toogle&& 'scale-110'} duration-150 h-6 w-6 mx-auto`}
             fill="#404040"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
