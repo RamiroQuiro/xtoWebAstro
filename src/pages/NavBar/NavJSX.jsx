@@ -15,22 +15,20 @@ export default function NavJSX() {
     handleClick={handleClick}
     />
   {
-  toogle&&
+
   <nav
-    className={`${toogle?'':''} animate-[aparecer_.2s] w-full h-full md:h-auto py-5 fixed top-0 text-gray-700 z-50 md:flex items-center justify-center mx-auto md:justify-between px-5 bg-white/60 border-b border-cyan-300/80`}
+    className={`${!toogle?'translate-y-full duration-300':'-translate-y-0 duration-300'} animate-[aparecer_.2s] w-full h-[35%]  md:h-min  py-5 fixed bottom-0 md:top-0 text-gray-700 z-50 md:flex items-center justify-center mx-auto md:justify-between px-5 bg-white/60 border-b border-cyan-300/80`}
   >
-    <div className="md:w-3/12 mx-auto flex bg-red-<500>">logo</div>
-    <div className="md:w-6/12 w-full h-full">
-      <ul className="flex flex-col md:flex-row items-center justify-evenly">
+    <div className="md:w-6/12 hidden md:flex mx-auto  >">logo</div>
+      <ul className="flex flex-wrap flex-grow md:flex-row items-center   md:justify-evenly gap-1">
         {
           Links?.map((link) => (
-            <li className="cursor-pointer">
-              <a href={link.href}>{link.name}</a>
-            </li>
+            <a href={link.href} className="cursor-pointer md:w-auto w-[48%] text-center shadow py-4 md:py-0 border rounded-lg md:bg-transparent md:border-none font-medium hover:scale-105 hover:text-yellow-500 duration-150  bg-white">
+              <li >{link.name}</li>
+            </a>
           ))
         }
       </ul>
-    </div>
   </nav>
 }
   </>
